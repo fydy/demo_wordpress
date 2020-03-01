@@ -3,8 +3,5 @@
   "builds": [
     { "src": "*.php", "use": "now-php" }
   ],
-#  "routes": [
-#    { "src": "/(.*)", "dest": "index.php" } 
-#  ],
   "regions": ["icn1"]
 }
