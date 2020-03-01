@@ -1,10 +1,10 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.php", "use": "now-php" }
+    { "src": "*.php", "use": "now-php" }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "index.php" } 
-  ],
+#  "routes": [
+#    { "src": "/(.*)", "dest": "index.php" } 
+#  ],
   "regions": ["icn1"]
 }
