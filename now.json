@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.php", "use": "now-php@0.0.9" }
+    { "src": "*.php", "use": "now-php@0.0.10" }
   ],
   "regions": ["icn1"]
 }
