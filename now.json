@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "*.php", "use": "@juicyfx/php@0.0.6" }
-  ],
+    "builds": [
+      { "src": "index.php", "use": "@juicyfx/php@0.0.6", "config": {"mode": "fpm"} }
+    ],
   "regions": ["icn1"]
 }
