@@ -1,13 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-      { "src": "wp-config.php", "use": "@juicyfx/php@0.0.6", "config": {"mode": "fpm"} }
-    ],
-  
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.3.1"
+    }
+  },
   "routes": [
-    { "src": "/wp-admin/?", "dest": "index.php" },
-    { "src": ".*\\.php$", "dest": "index.php" },
-    { "src": "//*.@(eot|otf|ttf|ttc|woff|font.css|css|js|ico|png|jpg|jpeg)", "headers": {"cache-control": "s-maxage=604800"} }
-  ],
-  "regions": ["icn1"]
+    { "src": "/(.*)",  "dest": "/api/index.php" }
+  ]
 }
