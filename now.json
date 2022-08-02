@@ -1,10 +1,16 @@
 {
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.3.1"
-    }
-  },
+  "version": 2,
+  "builds": [
+    { "src": "wp-config.php", "use": "now-wordpress@0.10.31" }
+  ],
   "routes": [
-    { "src": "/(.*)",  "dest": "/api/index.php" }
-  ]
+    { "src": "/wp-admin/?", "dest": "index.php" },
+    { "src": ".*\\.php$", "dest": "index.php" }
+  ],
+  "env": {
+    "DB_NAME": "@wordpress_db_name",
+    "DB_USER": "@wordpress_db_user",
+    "DB_PASSWORD": "@wordpress_db_password",
+    "DB_HOST": "@wordpress_db_host"
+  }
 }
