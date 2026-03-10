@@ -4,7 +4,20 @@
     { "src": "wp-config.php", "use": "vercel-wordpress@0.0.2" }
   ],
   "routes": [
-    { "src": "/wp-admin/?", "dest": "index.php" },
-    { "src": ".*\\.php$", "dest": "index.php" }
+    {
+      "src": "/wp-content/uploads/(.*)",
+      "dest": "/wp-content/uploads/$1"
+    },
+    {
+      "src": "/(.*\\.(css|js|png|jpg|gif|ico|svg|woff|woff2|ttf|eot))$",
+      "dest": "/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.php"
+    }
   ]
 }
