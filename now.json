@@ -6,5 +6,5 @@
   "routes": [
     { "src": "/wp-admin/?", "dest": "index.php" },
     { "src": ".*\\.php$", "dest": "index.php" }
-  ],
+  ]
 }
