@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "wp-config.php", "use": "vercel-wordpress@0.0.4" }
+    { "src": "wp-config.php", "use": "vercel-wordpress@0.0.5" }
   ],
   "routes": [
     { "handle": "filesystem" },
