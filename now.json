@@ -1,23 +1,10 @@
 {
   "version": 2,
   "builds": [
-    { "src": "wp-config.php", "use": "vercel-wordpress@0.0.2" }
+    { "src": "wp-config.php", "use": "vercel-wordpress@0.0.3" }
   ],
   "routes": [
-    {
-      "src": "/wp-content/uploads/(.*)",
-      "dest": "/wp-content/uploads/$1"
-    },
-    {
-      "src": "/(.*\\.(css|js|png|jpg|gif|ico|svg|woff|woff2|ttf|eot))$",
-      "dest": "/$1"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.php"
-    }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
