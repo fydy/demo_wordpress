@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "wp-config.php", "use": "now-wordpress@0.9.9" }
+    { "src": "wp-config.php", "use": "vercel-wordpress@0.0.1" }
   ],
   "routes": [
     { "src": "/wp-admin/?", "dest": "index.php" },
